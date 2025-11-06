@@ -16,7 +16,7 @@ This is a full-stack web application for FASTag recharge management, built with 
 ---
 
 ## Technology Stack
-- Frontend: React, React Router, Tailwind CSS, Stripe React SDK
+- Frontend: React, React Router/HashRouter, Tailwind CSS, Stripe React SDK
 - Backend: Node.js, Express.js, MongoDB with Mongoose ODM, Stripe API
 - Authentication: JWT tokens
 - Other: Axios for HTTP requests, dotenv for environment variables
@@ -109,3 +109,14 @@ Use the following card details for testing Stripe payments in test mode:
 - Ensure `.env` files are not committed to version control.
 
 ---
+When should you use HashRouter?
+
+Use HashRouter when:
+
+You deploy to Render, GitHub Pages, or Netlify without rewrite rules
+
+You want instant fix for refresh errors
+
+SEO is not important (dashboard apps, admin apps, portals)
+
+You want simple deployment
