@@ -39,13 +39,12 @@ const StripeRechargeForm = ({ vehicles }) => {
     setProcessing(true);
 
     try {
-      // Step 1: Create payment intent on backend
       const { data } = await API.post('/payments/create-payment-intent', {
         vehicleId,
         amount: Number(amount),
       });
 
-      // Step 2: Confirm card payment on frontend securely with Stripe
+      
       const result = await stripe.confirmCardPayment(data.clientSecret, {
         payment_method: {
           card: cardElement,
@@ -59,7 +58,7 @@ const StripeRechargeForm = ({ vehicles }) => {
       }
 
       if (result.paymentIntent.status === 'succeeded') {
-        // Step 3: Notify backend to confirm payment and create recharge record
+      
         await API.post('/payments/confirm-payment', {
           vehicleId,
           amount: Number(amount),
