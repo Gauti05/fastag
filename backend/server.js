@@ -6,7 +6,7 @@ const authRoutes = require('./routes/auth');
 const vehicleRoutes = require('./routes/vehicles');
 const rechargeRoutes = require('./routes/recharges')
 const contactRouter = require('./routes/contact');
-const paymentRoutes = require('./routes/payment'); // path to above router file in backend
+const paymentRoutes = require('./routes/payment'); 
 
 
 
