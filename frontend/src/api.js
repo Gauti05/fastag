@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://fastag-backend-03h3.onrender.com',
+  baseURL: 'https://fastag-backend-03h3.onrender.com/api',
 });
 
 API.interceptors.request.use((req) => {
@@ -11,3 +11,6 @@ API.interceptors.request.use((req) => {
 });
 
 export default API;
+
+
+
